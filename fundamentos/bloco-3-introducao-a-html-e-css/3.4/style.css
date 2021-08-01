@@ -1,0 +1,61 @@
+h1 {
+  text-align: center;
+}
+
+main {
+  margin-left: 330px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.primeiro {
+  clear: both;
+  margin-left: 220px;
+}
+
+.segundo {
+  clear: both;
+  margin-left: 220px;
+}
+
+.terceiro {
+  clear: both;
+  margin-left: 220px;
+}
+
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+  margin-left: 200px;
+}
+
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  float: left;
+}
+
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  float: left;
+}
+
+.direita {
+  float: left;
+}
+
+.esquerda {
+  float: left;
+}
