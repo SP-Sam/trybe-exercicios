@@ -41,6 +41,7 @@ for (sum of arrOfNumbers) {
   console.log(sum);
 } */
 
+// Último exercício
 let names = ['Samuel', 'João', 'Maria', 'Antônio', 'Margarida'];
 
 for (name of names) {
