@@ -1,0 +1,47 @@
+.azul {
+  background-color: blue;
+}
+
+.roxo {
+  background-color: purple;
+}
+
+.verde {
+  background-color: green;
+  height: 100px;
+}
+
+.amarelo {
+  background-color: yellow;
+}
+
+.rosa {
+  background-color: pink;
+}
+
+.div-border:hover {
+  border: 2px solid orange;
+}
+
+.estilo1 {
+  color: red;
+  font-style: italic;
+}
+
+.estilo2 {
+  text-decoration: underline;
+  color: white;
+}
+
+.estilo3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+}
+
+.estilo4 {
+  letter-spacing: 5px;
+}
+
+.estilo5 {
+  font-style: italic;
+}
