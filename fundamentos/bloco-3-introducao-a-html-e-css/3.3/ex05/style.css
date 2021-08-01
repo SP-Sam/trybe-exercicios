@@ -1,0 +1,40 @@
+ol li {
+  background-color: yellow;
+}
+
+.verde {
+  color: green;
+}
+
+.azul {
+  color: blue;
+}
+
+.rosa {
+  background-color: pink;
+}
+
+.maiusculo {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: red;
+}
+
+h1 em {
+  font-size: 40px;
+  border: 1px solid black;
+}
+
+li {
+  font-size: 20px;
+}
+
+li em {
+  font-weight: 700;
+}
+
+a:hover {
+  font-weight: 900;
+}
