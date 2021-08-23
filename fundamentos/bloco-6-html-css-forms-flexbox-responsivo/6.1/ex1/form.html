@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form action="" method="get">
+    <fieldset id="dados-pessoais">
+      <label for="name">Nome:</label>
+      <br>
+      <input class="text-field" type="text" name="name" id="name" maxlength="40" required>
+      <br><br>
+
+      <label for="email">E-mail:</label>
+      <br>
+      <input class="text-field" type="email" name="email" id="email" maxlength="50" required>
+      <br><br>
+
+      <label for="cpf">CPF:</label>
+      <br>
+      <input class="text-field" type="number" name="cpf" id="cpf" maxlength="11" required>
+      <br><br>
+
+      <label for="city">Cidade:</label>
+      <br>
+      <input class="text-field" type="text" name="city" id="city" maxlength="28" required>
+      <br><br>
+
+      <label for="states">Estado:</label>
+      <select name="states" id="states"></select>
+      <br><br>
+
+      <p>Tipo:</p>
+      <label for="type1">
+        <input type="radio" name="type" id="type1" required> Casa
+      </label>
+      <label for="type2">
+        <input type="radio" name="type" id="type2" required> Apartamento
+      </label>
+      <br><br>
+    </fieldset>
+    <br>
+    
+    <fieldset id="ultimo-emprego">
+      <label for="resumo">Resumo do Currículo:</label>
+      <br>
+      <textarea name="resume" id="resumo" cols="80" rows="10" maxlength="1000" required></textarea>
+      <br><br>
+
+      <label for="cargo">Cargo:</label>
+      <br>
+      <input type="text" name="cargo" id="cargo" maxlength="40" required>
+      <br><br>
+
+      <label for="cargo-descricao">Descrição do cargo:</label>
+      <br>
+      <input type="text" name="cargo" id="cargo-descricao" maxlength="500" required>
+      <br><br>
+
+      <label for="data">Data de início</label>
+      <input type="date" name="data" id="data" required>
+    </fieldset>
+    <br>
+    <button id="enviar" type="submit">Enviar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
