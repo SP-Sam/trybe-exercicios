@@ -5,93 +5,86 @@
   font-family: 'Ubuntu';
 }
 
-body {
-  background-color: rgb(247, 247, 247);
-}
-
-.header-container {
-  background-color: #5C687C;
+#cabecalho {
   display: flex;
-}
-
-.logo-container {
-  display: flex;
-  justify-content: center;
-  flex-basis: 268px;
-  order:-1;
-}
-
-.menu-container {
-  display: flex;
-  flex-basis: 500px;
-  flex-grow: 1;
-}
-
-.menu-container ul {
-  display: flex;
+  height: 50px;
+  flex-flow: row wrap;
   justify-content: space-around;
-  width: 100%;
-}
-
-.menu-container li {
-  color: white;
-  font-weight: 500;
-  font-size: 1.3rem;
-  list-style: none;
-  margin-right: 10px;
-  align-self: center;
-}
-
-.main-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.movie-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 10;
-}
-
-.movie-container h2 {
-  margin: 40px 0;
-  text-align: center;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-basis: 700px;
-}
-
-.card-container div {
   align-items: center;
-  background-color: #5C687C;
-  border: black solid 1px;
+  background-color: rgb(90, 90, 90);
+  color: white;
+  font-weight: bold;
+}
+
+#cabecalho img {
+  width: 50px;
+}
+
+.sign-up {
+  text-decoration: underline;
+  color: rgb(196, 196, 196);
+}
+
+#page-content {
   display: flex;
-  height: 150px;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 10px;
-  flex-basis: 16%;
-  flex-grow: 1;
 }
 
-.aside-container {
+.container {
   display: flex;
-  flex-direction: column;
-  margin: 20px;
-  flex-basis: 350px;
-  flex-grow: 1;
-  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.aside-container h3, h4 {
-  margin-bottom: 10px;
-  text-align: center;
+#description {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
 }
 
-.aside-container p {
-  margin: 10px 0;
-  text-align: justify;
+#description {
+  color: rgb(112, 112, 112);
+  font-weight: 700;
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 175px;
+  background-color: rgb(235, 235, 235);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 5px;
+  box-shadow: 3px 3px rgb(177, 177, 177);
+}
+
+.card h3 {
+  color: grey;
+  padding-bottom: 8px;
+}
+
+#cards img {
+  width: 150px;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  width: 200px;
+  border-top: 2px solid rgb(172, 170, 170);
+}
+
+#footer a img {
+  margin: 15px 5px;
+  width: 30px;
 }
