@@ -32,5 +32,5 @@ const skills = (student) => {
 console.log('Estudante 1');
 skills(student1);
 
-console.log('\nEstudante 2');
+console.log('Estudante 2');
 skills(student2);
