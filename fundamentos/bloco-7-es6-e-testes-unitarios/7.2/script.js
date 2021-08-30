@@ -1,4 +1,4 @@
-/* const makeObject = (object = {}, key, value) => {
+/* const makeObject = (object, key, value) => {
   object[key] = value;
 
   return object;
