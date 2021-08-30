@@ -42,7 +42,7 @@ const customerInfo = (order) => {
   const address = order.address;
 
   return `Olá ${deliveryPerson}, entrega para: ${name}, Telefone: ${phoneNumber}, R. ${address.street}, Nº: ${address.number}, AP: ${address.apartment}`;
-}
+};
 
 console.log(customerInfo(order));
 
@@ -58,6 +58,6 @@ const orderModifier = (order) => {
   const drinks = order.order.drinks.coke.type;
 
   return `Olá ${newPerson}, o total do seu pedido de ${Object.keys(pizzas)} e ${drinks} é R$ ${price},00`;
-}
+};
 
 console.log(orderModifier(order));

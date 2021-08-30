@@ -51,7 +51,7 @@ const verificaPar = (objeto, chave, valor) => {
     if (entradas[i][0] === chave && entradas[i][1] === valor) igual = true;
   }
   return igual;
-}
+};
 
 console.log(adicionaTurno(lesson2, 'turno', 'manhã'));// Exercício 1
 console.log(listarChaves(lesson3));// Exercício 2
