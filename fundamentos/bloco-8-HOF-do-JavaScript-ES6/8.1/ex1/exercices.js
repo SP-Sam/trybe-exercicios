@@ -44,8 +44,9 @@ const countAnswers = (rightAnsers, studentAnswers, callback) => {
 const checkAnswers = (rA, sA) => {
   let points = 0;
 
-  for (let i in rA) {
+  for (let i = 0; i < rA.length; i += 1) {
     if (rA[i] === sA[i]) points += 1;
+    if (sA[i] === 'N.A') points += 0;
     if (rA[i] !== sA[i]) points -= 0.5;
   }
 
