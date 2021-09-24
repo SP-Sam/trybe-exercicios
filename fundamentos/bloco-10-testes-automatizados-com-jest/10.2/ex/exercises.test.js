@@ -78,7 +78,8 @@ describe('getUserName - promise', () => {
   .then((data) => {
     return data.map((repo) => repo.name);
   }); */
-const fetch = require('node-fetch');
+
+/* const fetch = require('node-fetch');
   
 const getRepos = async (url) => {
   const response = await fetch(url);
@@ -92,4 +93,84 @@ it('Retorn uma lista de repositorios', async () => {
 
   expect(response).toContain('sd-01-week4-5-project-todo-list');
   expect(response).toContain('sd-01-week4-5-project-meme-generator');
-})
+}) */
+
+/* beforeEach(() => console.log('1 - beforeEach'));
+afterEach(() => console.log('1 - afterEach'));
+
+test('', () => console.log('1 - test'));
+
+describe('Scoped / Nested block', () => {
+  beforeEach(() => console.log('2 - beforeEach'));
+  afterEach(() => console.log('2 - afterEach'));
+
+  test('', () => console.log('2 - test'));
+}); */
+
+const Animals = [
+  { name: 'Dorminhoco', age: 1, type: 'Dog' },
+  { name: 'Soneca', age: 2, type: 'Dog' },
+  { name: 'Preguiça', age: 5, type: 'Cat' },
+];
+
+const findAnimalByName = (name) => (
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const result = Animals.find((animal) => animal.name === name);
+
+      if (result) resolve(result);
+      
+      return reject(new Error('Nenhum animal com esse nome!'));
+    }, 100);
+  })
+);
+
+const findAnimalByAge = (age) => (
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const result = Animals.filter((animal) => animal.age === age);
+
+      if (result.length > 0) resolve(result);
+      
+      return reject(new Error('Nenhum animal encontrado!'));
+    }, 100);
+  })
+);
+
+describe('Testando promise - findAnimalByName', () => {
+  // 6.1
+  describe('Quando existe o animal com o nome procurado', () => {
+    it('Retorna o objeto do animal', async () => {
+      const response = await findAnimalByName('Soneca');
+      expect(response).toEqual({ name: 'Soneca', age: 2, type: 'Dog' });
+    });
+  });
+
+  describe('Quando não existe o animal com o nome procurado', () => {
+    it('Retorna um erro', async () => {
+      try {
+        await findAnimalByName('Bob');
+      } catch (error) {
+        expect(error.message).toEqual('Nenhum animal com esse nome!');
+      }
+    });
+  });
+
+  // 6.2
+  describe('Quando existe o animal com a idade informada', () => {
+    it('Retorna o objeto do animal', async () => {
+      const response = await findAnimalByAge(5);
+      expect(response).toEqual([{ name: 'Preguiça', age: 5, type: 'Cat' }]);
+    })
+  })
+
+  describe('Quando não existe o animal com a idade informada', () => {
+    it('Retorna um erro', async () => {
+      try {
+        await findAnimalByAge(9);
+      } catch (error) {
+        expect(error.message).toEqual('Nenhum animal encontrado!');
+      }
+    })
+  })
+});
