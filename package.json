@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SP-Sam/trybe-exercicios#readme",
   "devDependencies": {
+    "@types/jest": "^27.0.2",
     "jest": "^27.2.1"
   },
   "dependencies": {
