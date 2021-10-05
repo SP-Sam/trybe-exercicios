@@ -19,7 +19,7 @@ describe('Exercício 1', () => {
   })
 }) */
 
-/* Para os exercícios 2 e 3
+// Para os exercícios 2 e 3
 const users = [
   { id: 1, name: 'Mark' },
   { id: 2, name: 'Paul' },
@@ -35,9 +35,9 @@ const findUserById = (id) => new Promise((resolve, reject) => {
   return reject(new Error(`User with ${id} not found.`));
 });
 
-const getUserName = (userId) => findUserById(userId).then((user) => user.name); */
+const getUserName = (userId) => findUserById(userId).then((user) => user.name);
 
-/* Exercício 2
+// Exercício 2
 describe('getUserName - promise', () => {
   describe('quando o usuário existe', () => {
     it('retorna o nome do usuário', () => (
@@ -52,7 +52,7 @@ describe('getUserName - promise', () => {
         expect(error.message).toMatch('User with 3 not found.'));
       });
     });
-}); */
+});
 
 /* Exercício 3
 describe('getUserName - promise', () => {
@@ -95,7 +95,7 @@ it('Retorn uma lista de repositorios', async () => {
   expect(response).toContain('sd-01-week4-5-project-meme-generator');
 }) */
 
-/* beforeEach(() => console.log('1 - beforeEach'));
+beforeEach(() => console.log('1 - beforeEach'));
 afterEach(() => console.log('1 - afterEach'));
 
 test('', () => console.log('1 - test'));
@@ -105,7 +105,7 @@ describe('Scoped / Nested block', () => {
   afterEach(() => console.log('2 - afterEach'));
 
   test('', () => console.log('2 - test'));
-}); */
+});
 
 const Animals = [
   { name: 'Dorminhoco', age: 1, type: 'Dog' },
