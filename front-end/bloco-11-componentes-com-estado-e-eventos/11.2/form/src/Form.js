@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import Checkbox from './Checkbox';
+import Input from './Input';
 
 class Form extends Component {
   constructor() {
@@ -44,39 +46,29 @@ class Form extends Component {
 
         <fieldset className="login-area">
           <legend>Login</legend>
-          <label htmlFor="email">
-            E-mail:
-            <input 
-              type="email"
-              name="email"
-              id="email"
-              value={this.state.email}
-              onChange={this.handleChange}
-            />
-          </label>
-
-          <label htmlFor="password">
-            Senha:
-            <input
+          <Input
+            type="email"
+            id="email"
+            value={this.state.email}
+            onChange={this.handleChange}
+            text="E-mail:"
+          />
+          <Input
             type="password"
-            name="password"
             id="password"
             value={this.state.password}
-            onChange={this.handleChange}/>
-          </label>
+            onChange={this.handleChange}
+            text="Senha:"
+          />
         </fieldset>
 
-
-        <label htmlFor="git">
-          <input
-            type="checkbox"
-            name="git"
-            id="git" 
-            checked={this.state.git}
-            onChange={this.handleChange}
-          />
-          Manja de git?
-        </label>
+        <Checkbox
+          type="checkbox"
+          id="git"
+          value={this.state.git}
+          onChange={this.handleChange}
+          text="Manja de git?"
+        />
       </form>
     )
   }
