@@ -12,6 +12,8 @@
 }
 
 .pokemonCard {
+  display: flex;
+  flex-direction: column;
   min-width: 350px;
   display: flex;
   justify-content: space-evenly;
@@ -20,6 +22,15 @@
   margin: 7px;
   border-radius: 8px;
   box-shadow: 5px 5px 5px;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.pokeInfos {
+  min-width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .pokemonInfos {
@@ -27,6 +38,16 @@
   flex-direction: column;
   align-items: center;
   line-height: 1.5em;
+}
+
+.pokemonCard a {
+  color: tomato;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.pokemonCard a:hover {
+  color: rgb(255, 38, 0);
 }
 
 .buttons-area {
