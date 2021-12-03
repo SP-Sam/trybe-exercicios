@@ -6,7 +6,6 @@ import Pokedex from './components/Pokedex';
 import pokemons from "./data";
 import PokemonDetails from "./PokemonDetails";
 
-
 class App extends Component {
   render() {
     return (
@@ -18,6 +17,9 @@ class App extends Component {
           </Switch>
         </div>
       </BrowserRouter>
+      <div className="App">
+        <Pokedex pokemons={ pokemons }/>
+      </div>
     )
   }
 }
