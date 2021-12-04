@@ -22,17 +22,17 @@ export default function Timer() {
     setRandomNumber(generateRandomNumber());
   }, [update]);
 
-  useEffect(() => isThreeAndFiveMiltuple());
+  useEffect(() => setHit());
 
   const generateRandomNumber = () => (Math.floor((Math.random() * 1) * 101));
 
-  function isThreeAndFiveMiltuple() {
+  function setHit() {
     const isMultiple = randomNumber % 3 === 0 && randomNumber % 5 === 0;
+
     if (isMultiple) {
       setIsHit(true);
-
       setTimeout(() => {
-        setIsHit(false)
+        setIsHit(false);
       }, FOUR_SECONDS);
     } else {
       setIsHit(false);
