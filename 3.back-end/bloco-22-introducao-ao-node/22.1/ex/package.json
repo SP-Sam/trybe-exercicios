@@ -1,0 +1,18 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "Exercicios do dia 22.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "imc": "node imc",
+    "velo": "node velocidade",
+    "sorteio": "node sorteio"
+  },
+  "author": "Samuel Pereira",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
