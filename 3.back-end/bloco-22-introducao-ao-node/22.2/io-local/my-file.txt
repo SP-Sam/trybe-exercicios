@@ -1,0 +1,1 @@
+Primeira linha do meu arquivo de texto.
