@@ -41,6 +41,34 @@ const readSimpsonsCharacterId = (characterId) => {
   return promise;
 };
 
-readSimpsonsCharacterId(1)
-  .then(result => console.log(result))
-  .catch(err => console.log(err.message));
+// readSimpsonsCharacterId(1)
+//   .then(result => console.log(result))
+//   .catch(err => console.log(err.message));
+
+// Exercício 4.3
+const { writeFile } = require('fs').promises;
+
+const removeCharacters = (idA, idB) => {
+  const promise = new Promise((resolve, reject) => {
+    if (typeof idA != 'number' || typeof idB != 'number') {
+      return reject(new Error('O ID especificado deve ser um numero'));
+    }
+
+    const characterList = simpsonsCharacters
+      .filter(character => Number(character.id) != idA || Number(character.id) != idB);
+    
+    // const characterListToString = JSON.stringify(characterList);
+    resolve(characterList);
+    
+    // writeFile('./simpsons.json', characterListToString)
+    //   .then(() => resolve("Arquivo 'simpsons.json' alterado com sucesso."))
+    //   .catch(
+    //     err => console.error('ERRO: Nao foi possivel alterar o arquivo: ', err.message));
+  });
+
+  return promise;
+};
+
+removeCharacters(10, 6)
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err.message));
