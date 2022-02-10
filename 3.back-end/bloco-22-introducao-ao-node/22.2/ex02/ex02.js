@@ -17,8 +17,30 @@ const readSimpsonsCharacters = (characters) => {
   return promise;
 };
 
-readSimpsonsCharacters(simpsonsCharacters)
-  .then(result => console.log(result))
-  .catch(err => console.log(err.message));
+// readSimpsonsCharacters(simpsonsCharacters)
+//   .then(result => console.log(result))
+//   .catch(err => console.log(err.message));
 
 // Exercício 4.2
+const readSimpsonsCharacterId = (characterId) => {
+  const promise = new Promise((resolve, reject) => {
+    const hasCharacterId = simpsonsCharacters
+      .some(simpsonsCharacter => Number(simpsonsCharacter.id) === characterId);
+    
+    if (!hasCharacterId) {
+      reject(new Error('ERRO: ID nao encontrado'));
+    }
+
+    const characterInfo = simpsonsCharacters.find(character => {
+      return Number(character.id) === characterId;
+    });
+
+    resolve(characterInfo);
+  })
+
+  return promise;
+};
+
+readSimpsonsCharacterId(1)
+  .then(result => console.log(result))
+  .catch(err => console.log(err.message));
