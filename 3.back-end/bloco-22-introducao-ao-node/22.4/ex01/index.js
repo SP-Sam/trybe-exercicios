@@ -12,7 +12,7 @@ const drinks = [
 ];
 
 app.get('/drinks', (_req, res) => {
-  return res.json(drinks);
+  return res.status(200).json(drinks);
 });
 
 app.get('/drinks/sorted', (_req, res) => {
@@ -22,7 +22,7 @@ app.get('/drinks/sorted', (_req, res) => {
     return 0;
   });
 
-  return res.json(sortedDrinks);
+  return res.status(200).json(sortedDrinks);
 });
 
 app.listen(3001, () => {
