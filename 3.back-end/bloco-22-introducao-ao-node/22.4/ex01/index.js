@@ -1,3 +1,4 @@
+const { application } = require('express');
 const express = require('express');
 
 const app = express();
@@ -11,8 +12,13 @@ const drinks = [
   { id: 6, name: 'Agua Mineral 500 ml', price: 5.0 },
 ];
 
-app.get('/drinks', (_req, res) => {
-  return res.status(200).json(drinks);
+app.get('/drinks/search', (req, res) => {
+  const { name } = req.query;
+  const filteredDrinks = drinks.filter(drink => {
+    return drink.name.includes(name);
+  });
+
+  res.status(200).json(filteredDrinks);
 });
 
 app.get('/drinks/sorted', (_req, res) => {
@@ -25,6 +31,21 @@ app.get('/drinks/sorted', (_req, res) => {
   return res.status(200).json(sortedDrinks);
 });
 
-app.listen(3001, () => {
-  console.log('Server rondando na porta 3001');
+app.get('/drinks/:id', (req, res) => {
+  const { id } = req.params;
+  const drink = drinks.find(drink => {
+    return drink.id === parseInt(id);
+  });
+  
+  if (!drink) return res.status(404).json({ message: 'Drink not found.' })
+  
+  return res.status(200).json(drink);
+});
+
+app.get('/drinks', (_req, res) => {
+  return res.status(200).json(drinks);
+});
+
+app.listen(3002, () => {
+  console.log('Server rondando na porta 3002');
 });
