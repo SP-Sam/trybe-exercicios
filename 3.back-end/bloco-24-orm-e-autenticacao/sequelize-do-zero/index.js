@@ -1,5 +1,5 @@
 const express = require('express');
-const { Store } = require('./models');
+const { Store } = require('./src/models');
 
 const app = express();
 app.use(express.json());
